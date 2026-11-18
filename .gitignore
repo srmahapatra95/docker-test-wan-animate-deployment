@@ -1,0 +1,13 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+
+# Python virtual environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
