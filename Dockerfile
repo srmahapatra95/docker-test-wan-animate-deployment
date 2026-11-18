@@ -46,4 +46,4 @@ COPY start.sh .
 #RUN chmod +x /app/start.sh
 
 # Set the default command to run when starting the container
-CMD ["/opt/handler-venv/bin/python","-u", "handler.py"]
+ENTRYPOINT ["/opt/handler-venv/bin/python","-u", "handler.py"]
