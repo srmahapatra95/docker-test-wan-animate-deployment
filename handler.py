@@ -921,6 +921,5 @@ def handler(job: dict) -> dict:
                 )
 
 
-if __name__ == "__main__":
-    logger.info("Starting RunPod Serverless handler...")
-    runpod.serverless.start({"handler": handler})
+logger.info("Starting RunPod Serverless handler...")
+runpod.serverless.start({"handler": handler})
