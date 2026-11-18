@@ -106,13 +106,13 @@ fi
 cd /app
 echo "Starting RunPod handler..."
 
-"${HANDLER_PYTHON}" /app/handler.py &
-HANDLER_PID=$!
+exec "${HANDLER_PYTHON}" /app/handler.py
+# HANDLER_PID=$!
 
-set +e
-wait "${HANDLER_PID}"
-HANDLER_STATUS=$?
-set -e
+# set +e
+# wait "${HANDLER_PID}"
+# HANDLER_STATUS=$?
+# set -e
 
-HANDLER_PID=""
-exit "${HANDLER_STATUS}"
+# HANDLER_PID=""
+# exit "${HANDLER_STATUS}"

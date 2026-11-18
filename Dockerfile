@@ -43,7 +43,7 @@ COPY handler.py .
 COPY start.sh .
 
 # Make startup script executable
-#RUN chmod +x /app/start.sh
+RUN chmod +x /app/start.sh
 
 # Set the default command to run when starting the container
-ENTRYPOINT ["/opt/handler-venv/bin/python","-u", "handler.py"]
+ENTRYPOINT ["/app/start.sh"]
